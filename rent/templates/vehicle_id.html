@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<ul>
+	{%for v in vehicle %}
+		<li>
+			Vehicle Id: {{v.id}}<br> 
+			Vehicle Type: {{v.vehicle_type}}<br>
+			Vehicle Size: {{v.size}}<br>
+			Vehicle Cost: {{v.real_cost}}<br><hr>	
+		</li>	
+	</ul>
+	{%endfor%}
+
+	{%for r in rental %}
+		Return Date: {{r.return_date}}
+	{%endfor%}
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<ul>
+	{%for v in vehicle %}
+		<li>
+			Vehicle Id: <a href="{% url 'vehicle_id' id=v.id %}">{{v.id}}</a><br> 
+			Vehicle Type: {{v.vehicle_type}}<br>
+			Vehicle Size: {{v.size}}<br>
+
+			<hr>
+		</li>	
+	</ul>
+	{%endfor%}			
+{% endblock %}

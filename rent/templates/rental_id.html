@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+
+{%block content%}
+	<h2>Rental Information: </h2>
+	{% for c in customer %}
+	<h3>Information about the customer:</h3>
+			Name: {{c.first_name}} {{c.last_name}}<br>
+			Phone: {{c.phone_number}}<br>
+			Address: {{c.address}}, {{c.city}}, {{c.country}}<br>
+			<hr>
+	{% endfor %}
+
+	<h3>Information about the vehicle:</h3>
+	{% for v in vehicle %}
+			Real Cost: {{v.real_cost}}$ <br>
+			Type: {{v.vehicle_type}}<br>
+			Size: {{v.size}}<br><hr>	
+	{% endfor %}
+
+
+	<h3>Information about the rental:</h3>	
+	{% for r in rental %}
+			Rental Date: {{r.rental_date}}<br>
+			Return Date: {{r.return_date}}<br>	
+	{% endfor %}
+{% endblock %}
+
+

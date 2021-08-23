@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<ul>
+	{%for v in rentals %}
+		<li>
+			<a href="{% url 'rental_id' id=v.id %}">Rental ID: {{v.id}}</a><br>
+			Rental Date: {{v.rental_date}}<br>
+			Return Date: {{v.return_date}}<br>
+			<hr>
+		</li>	
+	</ul>
+	{%endfor%}			
+{% endblock %}
+

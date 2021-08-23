@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+	{%for c in customer%}
+
+	Name: {{c.last_name }} {{c.first_name }} <br>
+	Email: {{c.email}} <br>
+	Phone: {{c.phone_number}} <br>
+	Address: {{c.address}}, {{c.city}}, {{c.country}} <br> <hr>
+	{%endfor%}
+{% endblock %}

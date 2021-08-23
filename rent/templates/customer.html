@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% block content %}
+	{%for c in customer%}
+	Id number: <a href="{% url 'customer_id' id=c.id %}">{{c.id}}</a><br>
+	Name: {{c.last_name }} {{c.first_name }} <br><hr>
+	{%endfor%}
+{% endblock %}
